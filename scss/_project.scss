@@ -1,0 +1,100 @@
+.project{
+    margin: 0 0 0 ;
+    background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.808), rgba(0, 0, 0, 0.815)),
+    url(../img/image/macboock.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    
+
+&__title{
+    color: $background-colorWhite;
+    font-family: $SansSemi-Font;
+    font-size: 60px;
+    font-weight: $mainFontWeight;
+    
+    letter-spacing: 3px;
+    
+    padding: 305px 0 26px 0;
+}
+
+&__subtitle{
+    color: $background-colorWhite;
+    font-family: $Sans-Font;
+    font-size: 22px;
+    font-weight: $mainFontWeight;
+    letter-spacing: 1.1px;
+    padding: 0 0 136px 0;
+}
+&__button{
+    margin: 0 0 100px 0;
+    
+    :hover{
+        background-color: $hover-color;
+        border: 2px solid transparent;
+    }
+}
+&__button_style{
+    display: inline-block;
+    border: 2px solid $background-colorWhite ;
+    padding: 22px 0px;
+    min-width: 220px;
+    min-height: 70px;
+    color: $background-colorWhite;
+    font-family: $Roboto-Font;
+    font-size: 20px;
+    font-weight: $solidFontWeight;
+    line-height: $mainLineHeight;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 1.5s;
+    cursor: url("../img/icon/cursor.png"), pointer;
+    user-select: none;
+}
+&__button_style:not(:last-child){
+    margin: 0 20px 0 0 ;
+}
+&__arrow{
+    padding: 0 0 76px 0;
+    max-height: 25px;
+    :hover{
+        color: $hover-color;
+        font-size: 40px;
+        
+     }
+&__style{
+    transition: 1s;
+    color: white;
+    font-size: 25px;
+    letter-spacing: 1.25px;
+    font-weight: $mainFontWeight;
+    width: 10px;
+    cursor: url("../img/icon/cursor.png"), pointer;
+}
+}
+}
+
+@media (max-width: $phoneWidth){
+    .project{
+
+        &__title{
+            font-size: 35px;
+            padding: 150px 0 36px;
+        }
+        &__subtitle{
+            font-size: 20px;
+            padding: 0 0 100px;
+            
+        }
+        &__button_style{
+            display: flex;
+            justify-content: center;
+        }
+        
+        &__button_style:not(:last-child){
+              margin: 0 0 20px 0;
+}
+    }
+}
+

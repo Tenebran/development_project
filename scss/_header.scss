@@ -1,0 +1,114 @@
+.content__conteiner__header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header{
+    height: 123px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: $background-colorWhite;
+    border-bottom: 1px solid $text-color;
+    z-index: 100;
+
+    &__logo{
+        padding: 50px 0 0 0;
+        font-family: $Sans-Font;
+        font-size: 25px;
+        font-weight: 700;
+
+        &__icon{
+            color: $text-color;
+            cursor: url("../img/icon/cursor.png"), pointer;
+        }
+    }
+
+    &__link{
+        padding: 53px 0 0 0;
+    }
+    
+    &__nav__link{
+        color: $text-color;
+        font-family: $SansSemi-Font;
+        font-size: 20px;
+        font-weight: $mainFontWeight;
+        line-height: $mainLineHeight;
+        letter-spacing: 1px;
+        cursor: url("../img/icon/cursor.png"), pointer;
+    }
+
+    &__nav__link:not(:last-child){
+        padding: 0 28px 0 0;
+    }
+}
+
+@media (max-width: $smDesktopWidth){
+  
+   
+    .header__button_open + .header__link{
+        display: block;
+    }
+
+    .header__link{
+        display: none;
+        background-color: $hover-color;  
+    }
+    .header{
+        height: 80px;
+        position: fixed;
+
+        &__logo{
+            padding: 25px 0 0 0;
+        }
+        &__button{
+            margin-top: 5px;
+            top: 20px;
+            width: 70px ;
+            height: 70px;
+            background: url(../img/icon/burger__menu.png) no-repeat;
+            background-size: cover;
+            cursor: pointer;
+            &_open{
+               
+                background: url(../img/icon/close.png);
+                background-size: cover;
+            }
+        }
+        &__link{
+            position: fixed;
+            flex-direction: column;
+            top: 80px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 15px 0 0;
+        }
+     &__nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__link{
+            margin: 0 0 20px;
+        }
+    }
+}
+}
+
+@media (max-width: $smPhoneWidth){
+    .header{
+        height: 70px;
+        &__logo{
+            font-size: 20px;
+            }
+            &__button{
+                height: 60px;
+                width: 60px;
+            }
+            &__link{
+                top: 70px;
+            }
+    }
+}

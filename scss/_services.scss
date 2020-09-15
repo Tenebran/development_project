@@ -1,0 +1,42 @@
+.services{
+    &__list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    &__item{
+        flex: 1 1 33.33%;
+        margin: 0 0 25px 0;
+        padding: 0 10px 0 0;
+    }
+}
+
+@media (max-width: $desktopWidth){
+    .services{
+        &__list{
+            justify-content: space-evenly;
+        }
+        &__item{
+            flex: 1 1 50%;
+        }
+    }
+}
+
+@media (max-width: $desktopWidth){
+    .services{
+        &__item{
+            flex: 1 1 100%;
+            margin: 0 1px 15px 0;
+        }
+    }
+}
+
+@media (max-width: $smPhoneWidth){
+    .services{
+        &__item{
+            flex: 1 1 100%;
+            margin: 0 0 10px 0;
+        }
+    }
+}

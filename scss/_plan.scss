@@ -1,0 +1,28 @@
+.plan{
+
+    &__elements__list{
+    display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        }
+
+        &__elements{
+            flex: 1 1 33.33%;
+            margin: 0 0 25px 0;
+        }
+}
+
+@media (max-width: $desktopWidth){
+    .plan{
+    &__elements__list{
+        display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            }
+    
+            &__elements{
+                flex: 1 1 50%;
+                margin: 0 0 25px 0;
+            }
+}
+}

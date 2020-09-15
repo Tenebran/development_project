@@ -1,0 +1,29 @@
+.member{
+    &__list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    &__info{
+        flex: 1 1 33.33%;
+        margin: 0 0 25px 0;
+        padding: 0 10px 0 0;
+    }
+}
+
+@media (max-width: $smDesktopWidth){
+    .member{
+        &__list{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+    
+        &__info{
+            flex: 1 1 100%;
+            margin: 0 0 25px 0;
+            padding: 0 10px 0 0;
+        }
+    }
+}

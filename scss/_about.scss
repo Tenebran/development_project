@@ -1,0 +1,23 @@
+.about{
+
+    &__list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        
+    }
+
+    &__item{
+        flex: 1 1 33.33%;
+        margin: 0 10px 125px 0;
+    }
+}
+
+@media (max-width: $phoneWidth){
+    .about{
+        &__list{
+            display: block;
+        }
+    }
+}
+

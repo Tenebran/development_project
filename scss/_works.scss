@@ -1,0 +1,36 @@
+.works{
+    &__kuka{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    &__img{
+        flex: 1 1 33.33%;
+        margin: 0 0 25px 0;
+    }
+}
+
+@media (max-width: $desktopWidth){
+    .works{
+        &__kuka{
+            justify-content: space-evenly;
+        }
+        &__img {
+            flex: 0 1 50%;
+            margin: 0 0 25px ;
+        }
+    }
+}
+
+@media (max-width: $desktopWidth){
+    .works{
+        &__kuka{
+            justify-content: space-evenly;
+        }
+        &__img {
+            flex: 0 1 100%;
+            margin: 0 0 15px ;
+        }
+    }
+}

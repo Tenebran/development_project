@@ -1,0 +1,118 @@
+.member{
+    color: $text-color;
+    font-family: $Sans-Font;
+    text-align: center;
+    padding: 122px 0 124px;
+
+    &__title{   
+    font-size: 30px;
+    font-weight: $solidFontWeight;
+    line-height: $mainLineHeight;
+    letter-spacing: 1.5px;
+    margin: 0 0 36px;
+    }
+
+    &__subtitle{
+        font-size: 15px;
+        font-weight: $mainFontWeight;
+        line-height: $mainLineHeight;
+        letter-spacing: 0.75px;
+        max-width: 620px;
+        margin: 0 auto;
+    }
+
+    &__contact{
+        margin: 127px 0 0;
+    }
+    &__img{
+        max-width: 370px;
+        max-height: 320px;
+        object-fit: cover;
+    }
+    &__name{
+        margin: 38px 0 12px 0;
+        font-family: $SansSemi-Font;
+        font-size: 20px;
+        font-weight: $solidFontWeight;
+        line-height: 22px;
+        letter-spacing: 1px;
+    }
+
+    &__position{
+        font-family: $Sans-Font;
+        font-size: 15px;
+        font-weight: $mainFontWeight;
+        line-height: 22px;
+        letter-spacing: 0.75px;
+        margin: 0 0 29px 0;
+    }
+
+    &__social{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 30px;
+        font-weight: 400;
+        
+    }
+    
+    &__icon{ 
+        
+        color: $hover-color;
+        background-color: $background-colorGrey;
+        border-radius: 10px;
+        padding: 12px;
+        min-width: 50px;
+        min-height: 50px;
+        cursor: url("../img/icon/cursor.png"), pointer;
+        user-select: none;
+        transition: 1.5s;
+        &:hover{
+            background-color: $background-colorBlue;
+            color: $background-colorWhite;
+        }
+        &_faceboock{
+            padding: 9px 18px 13px 17px;
+        }
+    }
+
+    &__sleider{
+        margin: 138px 0 0;
+        
+    }
+
+    &__select{
+        display: inline-block;
+        margin-left: 10px;
+        min-width: 15px;
+        min-height: 15px;
+        border-radius: 50%;
+        background: $hover-color;
+        cursor: url("../img/icon/cursor.png"), pointer;
+        user-select: none;
+        transition: 1s;
+
+        &:hover{
+            background-color: $background-colorBlue;
+        }
+        &:focus{
+            background-color: $background-colorBlue;
+        }
+        }
+}
+
+@media (max-width: $phoneWidth){
+    .member{
+        padding: 62px 0 64px;
+        &__img{
+            padding: 0 0 0 10px;
+            max-width: 280px;
+            max-height: 320px;
+            object-fit: cover;
+        }
+        &__sleider{
+            margin: 68px 0 0;
+            
+        }
+    }
+}

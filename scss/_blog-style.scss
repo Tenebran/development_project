@@ -1,0 +1,180 @@
+.blog{
+    background-color: $background-colorGreen;
+    color: $text-color;
+    padding: 125px 0 125px;
+
+    &__tiitle{
+        font-family: $Sans-Font;
+        font-size: 30px;
+        font-weight: $solidFontWeight;
+        line-height: $mainLineHeight;
+        letter-spacing: 1.5px;
+        text-align: center;
+    }
+
+    &__subtitle{
+        font-family: $Sans-Font;
+        font-size: 15px;
+        font-weight: $mainFontWeight;
+        line-height: $mainLineHeight;
+        letter-spacing: 0.75px;
+        max-width: 620px;
+        margin: 0 auto;
+        padding: 29px 0 127px;
+    }
+
+    &__child{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;    
+
+        &:nth-child(even){
+            flex-direction:row-reverse;
+            
+        }
+    }
+
+    &__img{
+        max-width: 570px;
+        max-height: 400px;
+    }
+
+    &__calender{
+        padding: 61px 90px 61px 0;
+        
+    }
+    &__link{
+        color: $text-color;
+        font-family: $SansSemi-Font;
+        font-size: 25px;
+        font-weight: $mainFontWeight;
+        line-height: $mainLineHeight;
+        letter-spacing: 1.25px;
+
+        &:hover{
+            color: $hover-color;
+            cursor: url("../img/icon/cursor.png"), pointer;
+            transition: 0.7s;
+        }
+    }
+
+    &__info{
+        color: $text-color;
+        font-family: $SansSemi-Font;
+        font-size: 17px;
+        font-weight: $mainFontWeight;
+        margin: 28px 0 32px;
+    }
+    &__date{
+    &:before{
+        font-family: "Font Awesome 5 Free";
+        content: "\f073";
+        padding: 0 13px 0 0;
+    }
+}
+&__whats{
+    &::before{
+        font-family: "Font Awesome 5 Free";
+    content: "\f15b";
+    padding: 0 13px 0 40px;
+    }
+}
+
+&__message{
+    font-family: $Sans-Font;
+    font-size: 15px;
+    font-weight: $mainFontWeight;
+    line-height: $mainLineHeight;
+    letter-spacing: 0.75px;
+    max-width: 448px;
+}
+
+&__button{
+    margin: 153px 0 0 0;
+    text-align: center;
+
+    &__link{
+        border: 2px solid $hover-color;
+        padding: 28px 52px;
+        color: $text-color;
+        font-family: $Roboto-Font;
+        font-size: 20px;
+        font-weight: $solidFontWeight;
+        line-height: $mainLineHeight;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        cursor: url("../img/icon/cursor.png"), pointer;
+        transition: 1.5s;
+
+        &:hover{
+            background-color: $hover-color;
+            color: $background-colorWhite;
+        }
+    }
+}
+}
+
+@media (max-width: $smDesktopWidth){
+.blog{
+    &__child{
+        justify-content: center;
+    }
+}
+}
+
+@media (max-width: $tableWidth){
+.blog{
+        &__img{
+            max-width: 440px;
+            max-height: 400px;
+        }
+}
+}
+
+@media (max-width: $phoneWidth){
+    .blog{
+            padding: 65px 0 65px;
+            
+            &__img{
+                max-width: 300px;
+                max-height: 400px;
+            }
+            &__date{
+                padding: 0 13px 20px 0;
+                display: block;
+            }
+
+            &__whats{
+                &::before{
+                padding: 0 13px 0 0;
+                }
+            } 
+            &__calender{
+                padding: 10px 0;
+            }
+
+            &__button{
+                margin: 103px 0 0;
+            }
+    }
+    }
+
+    @media (max-width: $smPhoneWidth){
+        .blog{
+            &__date{
+                padding: 0 13px 20px 0;
+                display: block;
+            }
+
+            &__whats{
+                &::before{
+                padding: 0 13px 0 0;
+                }
+            } 
+
+            &__info{
+                display: inline-block; 
+            }
+            
+        }
+    }
